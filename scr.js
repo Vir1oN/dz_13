@@ -186,7 +186,7 @@ const maxEvDelay = 4000;
 //     })
 //
 //
-// function brushTeeth (toDo, nextTask)
+// function brushTeeth (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -198,7 +198,7 @@ const maxEvDelay = 4000;
 //     });
 // }
 //
-// function attendLectures (toDo, nextTask)
+// function attendLectures (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -209,7 +209,7 @@ const maxEvDelay = 4000;
 //     }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
 //     });
 // }
-// function goForAwalk (toDo, nextTask)
+// function goForAwalk (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -220,7 +220,7 @@ const maxEvDelay = 4000;
 //     }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
 //     });
 // }
-// function haveDinner (toDo, nextTask)
+// function haveDinner (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -231,7 +231,7 @@ const maxEvDelay = 4000;
 //     }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
 //     });
 // }
-// function doCoding (toDo, nextTask)
+// function doCoding (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -242,7 +242,7 @@ const maxEvDelay = 4000;
 //     }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
 //     });
 // }
-// function goToBed (toDo, nextTask)
+// function goToBed (toDo)
 // {
 //     return new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -253,3 +253,36 @@ const maxEvDelay = 4000;
 //     }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
 //     });
 // }
+//
+// function startDay (toStart) {
+//     return new Promise((resolve, reject) => {
+//         console.log('I start my day with: ');
+//         setTimeout(() => {
+//             if (toStart) {
+//                 resolve('Waking up');
+//             }
+//
+//             reject('Failed to wake up');
+//         }, minEvDelay + Math.random() * (maxEvDelay - minEvDelay));
+//     });
+// }
+//
+// async function schedule()
+// {
+//     let result = await startDay(true);
+//     console.log(result);
+//     result = await brushTeeth(true);
+//     console.log(result);
+//     result = await attendLectures(true);
+//     console.log(result);
+//     result = await goForAwalk(true);
+//     console.log(result);
+//     result = await haveDinner(true);
+//     console.log(result);
+//     result = await doCoding(true);
+//     console.log(result);
+//     result = await goToBed(true);
+//     console.log(result);
+// }
+// schedule().then(console.log);
+
